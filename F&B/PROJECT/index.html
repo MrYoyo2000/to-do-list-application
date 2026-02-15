@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trader Focus Planner</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app">
+
+<!-- Header -->
+<header>
+    <h1>📈 Trader Focus Planner</h1>
+    <p>Discipline • Trading • Progress</p>
+</header>
+
+<!-- Form -->
+<form id="todoForm">
+    <input
+        type="text"
+        id="todoInput"
+        placeholder="Add a new task..."
+        autocomplete="off"
+        required
+    >
+
+    <select id="category">
+        <option value="study">📚 Study</option>
+        <option value="analysis">📊 Analysis</option>
+        <option value="trade">💸 Trading</option>
+        <option value="discipline">🧘 Discipline</option>
+    </select>
+
+    <button type="submit">Add</button>
+</form>
+
+<!-- AI Assist -->
+<div class="ai-bar">
+    <label class="ai-toggle">
+        <input type="checkbox" id="aiMode" checked>
+        <span>AI Assist</span>
+    </label>
+
+    <small id="aiHint"></small>
+</div>
+
+<!-- Button to open AI Command -->
+<button id="openAI" type="button" class="ai-open-btn">
+    🤖 Ask AI
+</button>
+
+<!-- AI Command -->
+<div class="ai-command" hidden>
+    <input
+        type="text"
+        id="aiInput"
+        placeholder="Ask AI: 'Create my daily plan'..."
+        autocomplete="off"
+    >
+    <button type="button" id="aiSend">Send</button>
+</div>
+
+<!-- AI Response (bubble) -->
+<div class="ai-response" id="aiResponse" hidden>
+<div class="ai-bubble">
+    <div class="ai-bubble-title">🤖 AI Reply</div>
+    <p id="aiReplyText"></p>
+</div>
+</div>
+
+<!-- Timer -->
+<div class="timer">
+<div class="timer-left">
+    <div class="timer-title">⏱ Focus Timer</div>
+    <div class="timer-display" id="timerDisplay">25:00</div>
+</div>
+
+<div class="timer-actions">
+    <button type="button" id="timerStart">Start</button>
+    <button type="button" id="timerPause">Pause</button>
+    <button type="button" id="timerReset">Reset</button>
+</div>
+</div>
+
+
+<!-- Stats -->
+<div class="stats">
+    <p id="counter">0 tasks remaining</p>
+    <p id="streak">🔥 Streak: 0 days</p>
+</div>
+
+<!-- Motivation -->
+<div class="quote">
+    <p id="quote">Discipline &gt; Motivation</p>
+</div>
+
+<!-- List -->
+<ul id="todoList"></ul>
+
+</div>
+<!--Footer-->
+<footer class="footer">
+    <span id="footerYear"></span>
+<a
+    href="https://github.com/MrYoyo2000"
+    target="_blank"
+    class="footer-link">
+    🔗 GitHub
+</a>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
