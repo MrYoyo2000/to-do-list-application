@@ -1,7 +1,7 @@
 # Dependencies
 node_modules/
 
-# Environment variables (clé API secrète)
+# Environment variables (secret API key)
 .env
 
 # Logs
